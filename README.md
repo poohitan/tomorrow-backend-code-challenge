@@ -1,6 +1,6 @@
-# Controling The Weather
-
 ![ClimaCell](https://climacell.ussl.co/wp-content/uploads/2019/03/CC-logo-base-black-w_blue-icon-300.png "ClimaCell")
+
+# Controling The Weather
 
 ## The Weather Service
 
@@ -8,13 +8,17 @@ In thie exercise, you will create a weather control service. This service's API 
 
 #### Required solution:
 
-* Create a basic. We recommend using [express-generator](https://github.com/expressjs/generator) for bootstrapping.
+* Create a basic service. We recommend using [express-generator](https://github.com/expressjs/generator) for bootstrapping.
 * The service should have the following functionality:
-  * Get the weather for a given location and time.
-  * Get the weather for a given location _now_.
-  * Update the weather for on given location.
+  * Get the weather for any given location and time.
+  * Get the weather for any given location, _now_.
+  * Update the weather for a location.
   * Get the X top hottest locations right now, given a number X.
-* You can use any fake data you want. _No real weather is needed._ For example, you can create a database places and their weather, as you see fit. You decide how "weather" structure looks like.
+* You decide how "weather" structure looks like, and what it contains. The same for "time".
+* You can use any fake data you want. _No real weather is needed._ For example, you can create a list of locations and their weather, as you see fit.
+
+#### After you finish:
+
 * Upload your code to `Github`, and share it with us. Notice: make it *__private__*, not public.
 * Make sure the app is ready to run by running `npm i` and `npm start`.
 * Make sure the API is well documented with `README` file, so we can understand it.
