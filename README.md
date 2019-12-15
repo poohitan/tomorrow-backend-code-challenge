@@ -28,7 +28,7 @@ In thie exercise, you will create a weather insights service. This service's API
 * The service's interface should be [RESTful](https://restfulapi.net/). A great example for a RESTful API is [JSON Placeholder](https://jsonplaceholder.typicode.com/guide.html).
 * We also care about things like readability, maintainability, naming, and in general everything that makes the code easy to understand and extend. **Think about the app as it should be ready to be shipped to production.**
 * You are free to add any libraries of your desire.
-* You will have to use ClimaCell's weather API. Explore the API to understand which service suits you best. We will provide you with an API Key.
+* You will have to use [ClimaCell's weather API](https://developer.climacell.co/docs). Explore the API to understand which service suits you best. We will provide you with an API Key.
 
 Don't hesitate to contact us with any question.
 
