@@ -1,19 +1,19 @@
 ![ClimaCell](https://climacell.ussl.co/wp-content/uploads/2019/03/CC-logo-base-black-w_blue-icon-300.png "ClimaCell")
 
-# Take Control on The Weather
+# Take Control over The Weather
 
 ## The Weather Insights Service
 
-In thie exercise, you will create a weather insights service. This service's API will allow understading the business impact weather has, by appliying business logic over ClimaCell's Weather API. To do that, you will have to use ClimaCell's weather API. Explore the API to understand which service suits you best.
+In thie exercise, you will create a weather insights service. This service's API will allow understading the great impact weather has on us, by appliying business logic over ClimaCell's Weather API.
 
 #### Required solution:
 
 * Create a basic service. We recommend using [express-generator](https://github.com/expressjs/generator) for bootstrapping.
 * The service should have the following functionality:
   * Get the _x_ top cities (where _x_ is a parameter) with the highest chance of getting flooded in the next 4 days. (Hint: the chance of flooding is as high as the amount of accumulated precipitation at the city. The larger it is, the higher the chance of flooding).
-  * Get the next timeslot over the next 6 hours, in which I can walk my dog outside in my _city_ (where _city_ is a parameter). (Hint: I love walking my dog for 30 minutes, when there is no precipitation, and the temperature is not over 25 degress celcius).
+  * Get the next timeslot over the next 6 hours, in which I can walk my dog in my _city_ (where _city_ is a parameter). (Hint: I love walking my dog for 30 minutes, when there is no precipitation, and the temperature is not over 25 degress celcius).
 * For a list of cities you can use, see [this repository](https://github.com/lutangar/cities.json).
-* Ourt user experience is important, so the goal is to have minimum response time of the service. You can, for example, for any given question, save the asnwer for 10 minutes, so you can return it instantly.
+* Our user experience is important, so make effort to have minimum response time of the service. You can, for example, for any given question, save the asnwer for 10 minutes, so you can return it instantly.
 
 #### After you finish:
 
@@ -28,7 +28,7 @@ In thie exercise, you will create a weather insights service. This service's API
 * The service's interface should be [RESTful](https://restfulapi.net/). A great example for a RESTful API is [JSON Placeholder](https://jsonplaceholder.typicode.com/guide.html).
 * We also care about things like readability, maintainability, naming, and in general everything that makes the code easy to understand and extend. **Think about the app as it should be ready to be shipped to production.**
 * You are free to add any libraries of your desire.
-* We will provide you with an API Key.
+* You will have to use ClimaCell's weather API. Explore the API to understand which service suits you best. We will provide you with an API Key.
 
 Don't hesitate to contact us with any question.
 
