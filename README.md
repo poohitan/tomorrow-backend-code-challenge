@@ -10,7 +10,7 @@ In thie exercise, you will create a weather insights service. This service's API
 
 * Create a basic service. We recommend using [express-generator](https://github.com/expressjs/generator) for bootstrapping.
 * The service should have the following functionality:
-  * Given a list of cities, return the 3 top cities with the highest chance of getting flooded in the next 4 days. (Hint: the chance of flooding is as high as the amount of accumulated precipitation at the city. The larger it is, the higher the chance of flooding).
+  * Given a list of cities (support up to 10), return the 3 top cities with the highest chance of getting flooded in the next 4 days. (Hint: the chance of flooding is as high as the amount of accumulated precipitation at the city. The larger it is, the higher the chance of flooding).
   * Get the next timeslot over the next 6 hours, in which I can walk my dog in my _city_ (where _city_ is a parameter). (Hint: I love walking my dog for 30 minutes, when there is no precipitation, and the temperature is not over 25 degress celcius).
 * You should support the 50 most populated cities in the world. For cities data you can use [this repository](https://github.com/lutangar/cities.json).
 * Our user experience is important, so make effort to have minimum response time of the service. You can, for example, for any given question, save the asnwer for 10 minutes, so you can return it instantly.
