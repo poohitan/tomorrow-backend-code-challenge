@@ -4,7 +4,7 @@
 
 ## The Weather Insights Service
 
-In thie exercise, you will create a weather insights service. This service's API will allow understading the great impact weather has on us, by appliying business logic over ClimaCell's Weather API.
+In this exercise, you will create a weather insights service. This service's API will allow understading the great impact weather has on us, by appliying business logic over ClimaCell's Weather API.
 
 #### Required solution:
 
