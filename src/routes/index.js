@@ -1,13 +1,14 @@
 const express = require('express');
+
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-    // PUT YOUR CODE HERE
-    res.json('ok');
+  // PUT YOUR CODE HERE
+  res.json('ok');
 
-    next();
+  next();
 });
 
 module.exports = {
-    router
+  router,
 };
