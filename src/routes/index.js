@@ -1,4 +1,5 @@
 const express = require('express');
+// const cities = require('cities.json');
 
 const router = express.Router();
 
