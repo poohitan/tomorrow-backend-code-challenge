@@ -18,9 +18,14 @@ Please do the following **BEFORE** the interview:
 * Run `npm start` in order to start the application
 
 #### Reading
-The challenge requires access Tomorrow.io's API, specifically the timeline (weather) API.
-As such, before the interview, please review the following:
-[Tomorrow.io's Weather API](https://www.tomorrow.io/weather-api)
+The challenge requires access Tomorrow.io's API, specifically the [timeline (weather) API](https://docs.tomorrow.io/reference/get-timelines). Please review it before the interview.
+
+Please use the following key for accessing the API:
+```5ZNGyYxAQ8YU77N6PhjNwSSfG93uGFMs```
+
+For more information about the API please read this:
+[Tomorrow.io's Weather API](https://docs.tomorrow.io/reference/welcome)
+[Recipes](https://docs.tomorrow.io/recipes)
 
 ### Required solution:
 
