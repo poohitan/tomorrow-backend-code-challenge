@@ -6,7 +6,29 @@
 
 In this exercise, you will create a weather insights service. This service's API will allow understading the great impact weather has on us, by appliying business logic over Tomorrow.io's Weather API.
 
-#### Required solution:
+### Preparations:
+
+Please do the following **BEFORE** the interview
+
+#### Setup
+* Download the repository
+* The challenge is meant to be used with node `v14.*`
+  * If you have `nvm` installed, run the following to set the node version:
+    * `nvm install`
+    * `nvm use`
+* Run `npm start` in order to start the application
+
+#### API access
+The challenge requires access Tomorrow.io's API, specifically the [timeline (weather) API](https://docs.tomorrow.io/reference/get-timelines). Please review it before the interview.
+
+Please use the following key for accessing the API:
+```5ZNGyYxAQ8YU77N6PhjNwSSfG93uGFMs```
+
+For more information about the API please read this:
+[Tomorrow.io's Weather API](https://docs.tomorrow.io/reference/welcome)
+[Recipes](https://docs.tomorrow.io/recipes)
+
+### Required solution:
 
 * Create a basic service. **We recommend forking this repository and use our template for quick bootstrapping.**
 * The service should have the following functionality:
@@ -33,8 +55,7 @@ const cities = require('cities.json');
 * Pay attention to software design and clean code (We are believers of the [SOLID](https://en.wikipedia.org/wiki/SOLID) design principals). 
 * The service's interface should be [RESTful](https://restfulapi.net/). A great example for a RESTful API is [JSON Placeholder](https://jsonplaceholder.typicode.com/guide.html).
 * We also care about things like readability, maintainability, naming, and in general everything that makes the code easy to understand and extend. **Think about the app as it should be ready to be shipped to production.**
-* You are free to add any libraries of your desire.
-* You will have to use [Tomorrow.io's Weather API](https://www.tomorrow.io/weather-api). Explore the API to understand which service suits you best. 
+* You are free to add any libraries of your desire. 
 
 Don't hesitate to contact us with any question.
 
