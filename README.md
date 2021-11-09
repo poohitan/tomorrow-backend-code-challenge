@@ -17,7 +17,7 @@ Please do the following **BEFORE** the interview:
     * `nvm use`
 * Run `npm start` in order to start the application
 
-#### Reading
+#### API access
 The challenge requires access Tomorrow.io's API, specifically the [timeline (weather) API](https://docs.tomorrow.io/reference/get-timelines). Please review it before the interview.
 
 Please use the following key for accessing the API:
