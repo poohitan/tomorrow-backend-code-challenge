@@ -8,8 +8,9 @@ In this exercise, you will create a weather insights service. This service's API
 
 ### Preparations:
 
+Please do the following **BEFORE** the interview
+
 #### Setup
-Please do the following **BEFORE** the interview:
 * Download the repository
 * The challenge is meant to be used with node `v14.*`
   * If you have `nvm` installed, run the following to set the node version:
