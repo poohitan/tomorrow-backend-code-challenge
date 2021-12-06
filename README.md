@@ -1,64 +1,65 @@
-![Tomorrow.io](https://hypercast-assets.s3-us-west-2.amazonaws.com/img/Tomorrow_Logo.png "Tomorrow.io")
+# Weather Insights API
 
-# Take Control over The Weather
+This API can help you answering small everyday questions related to weather.
 
-## The Weather Insights Service
+## 1. Flood risk evaluation
 
-In this exercise, you will create a weather insights service. This service's API will allow understading the great impact weather has on us, by appliying business logic over Tomorrow.io's Weather API.
+Accepts a list of cities and responds with the list of the top 3 cities with the highest chance of getting flooded in the next 4 days.
 
-### Preparations:
+Endpoint: `/risks/flood/top`
 
-Please do the following **BEFORE** the interview
+Query params:
 
-#### Setup
-* Download the repository
-* The challenge is meant to be used with node `v14.*`
-  * If you have `nvm` installed, run the following to set the node version:
-    * `nvm install`
-    * `nvm use`
-* Run `npm start` in order to start the application
+- `cities` (required) — comma separated list of cities to check. Supports up to 10 cities.
 
-#### API access
-The challenge requires access Tomorrow.io's API, specifically the [timeline (weather) API](https://docs.tomorrow.io/reference/get-timelines). Please review it before the interview.
+Sample request:
+**GET** `/risks/flood/top?cities=Lviv,Kyiv,Oslo,London`
 
-Please use the following key for accessing the API:
-```5ZNGyYxAQ8YU77N6PhjNwSSfG93uGFMs```
+Sample response:
 
-For more information about the API please read this:
-[Tomorrow.io's Weather API](https://docs.tomorrow.io/reference/welcome)
-[Recipes](https://docs.tomorrow.io/recipes)
+    {
+        "data" : {
+            "rating": [
+                {
+                    "name": "Kyiv",
+                    "floodRisk": 32.309999999999995
+                },
+                {
+                    "name": "London",
+                    "floodRisk": 23.02
+                },
+                {
+                    "name": "Lviv",
+                    "floodRisk": 0
+                }
+            ]
+        }
+    }
 
-### Required solution:
+Flood risk is the total number of accumulated rain in the city within the closest 4 days.
 
-* Create a basic service. **We recommend forking this repository and use our template for quick bootstrapping.**
-* The service should have the following functionality:
-  * Given a list of cities (support up to 10), return the 3 top cities with the highest chance of getting flooded in the next 4 days. (Hint: the chance of flooding is as high as the amount of accumulated precipitation at the city. The larger it is, the higher the chance of flooding).
-  * Get the next timeslot over the next 6 hours, in which I can walk my dog in my _city_ (where _city_ is a parameter). (Hint: I love walking my dog for 30 minutes, when there is no precipitation, and the temperature is not over 25 degress celcius).
-* This repo is already equipped with cities data. In order to use it, simply:
+## 2. Find a suitable dog walking timeslot
 
-```js
-const cities = require('cities.json');
-```
+Accepts a city name and responds with the closest timeslot over the next 6 hours, in which there would be no precipitations and the air temperature won't exceed 25 degrees Celsius, so you could comfortably walk your dog in this city.
 
-* Or, if you're implementing this exercise from scratch, You can use [this repository](https://github.com/lutangar/cities.json). Support the 100 cities most populated cities in the world. 
-* Our user experience is important, so make effort to have minimum response time of the service. You can, for example, for any given question, save the asnwer for 10 minutes, so you can return it instantly.
+Endpoint: `/activities/dog-walking/closest-timeslot`
 
-#### After you finish:
+Query params:
 
-* Upload your code to `Github`, and share it with us. Notice: make it *__private__*, not public.
-* Make sure the app is ready to run by running `npm i` and `npm start`.
-* Make sure the service API is well documented with `README` file, so we can try it and understand it.
-* *__Bonus:__* Deploy your solution to a static web hosting service of your choice (such as: `Heroku`, `Github`, `AWS S3`, `Netlify` etc..) so it is publicly available.
+- `city` (required) — the name of a city to walk a dog in.
 
-#### Guidelines:
+Sample request:
+**GET** `/activities/dog-walking/closest-timeslot?city=Jerusalem`
 
-* Pay attention to software design and clean code (We are believers of the [SOLID](https://en.wikipedia.org/wiki/SOLID) design principals). 
-* The service's interface should be [RESTful](https://restfulapi.net/). A great example for a RESTful API is [JSON Placeholder](https://jsonplaceholder.typicode.com/guide.html).
-* We also care about things like readability, maintainability, naming, and in general everything that makes the code easy to understand and extend. **Think about the app as it should be ready to be shipped to production.**
-* You are free to add any libraries of your desire. 
+Sample response:
 
-Don't hesitate to contact us with any question.
+    {
+        "data": {
+            "timeslot": {
+                "startTime": "2021-12-06T12:35:00.000Z",
+                "endTime": "2021-12-06T13:05:00.000Z"
+            }
+        }
+    }
 
-**Good Luck!**
-
-**The Tomorrow.io Team**
+Time values in responses are always UTC.
