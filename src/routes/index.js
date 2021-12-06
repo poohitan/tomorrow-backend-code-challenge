@@ -1,15 +1,11 @@
 const express = require('express');
-// const cities = require('cities.json');
+
+const activities = require('./activities');
+const risks = require('./risks');
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-  // PUT YOUR CODE HERE
-  res.json('ok');
+router.use('/activities', activities);
+router.use('/risks', risks);
 
-  next();
-});
-
-module.exports = {
-  router,
-};
+module.exports = router;
