@@ -22,7 +22,7 @@ Sample response:
             "rating": [
                 {
                     "name": "Kyiv",
-                    "floodRisk": 32.309999999999995
+                    "floodRisk": 32.31
                 },
                 {
                     "name": "London",
